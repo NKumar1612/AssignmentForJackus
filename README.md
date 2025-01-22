@@ -22,3 +22,4 @@ It was a really fun assignment to do, but i think i could've made some more chan
 - Add a verification for the email, to check if the email was valid or not.
 - Add a custom message for the delete notif.
 - Added a route for Edit Form, so the User Dashboard and Create Button would've not been visible, when doing it, to make the code look more professional.
+- My Create Page needs some more debugging.
