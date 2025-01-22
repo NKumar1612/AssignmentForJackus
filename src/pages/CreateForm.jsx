@@ -49,60 +49,73 @@ const CreateForm = ({ onAddUser }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit} className="space-y-4 p-4">
-            <div>
-                <label className="block">First Name:</label>
-                <input
-                    type="text"
-                    name="firstName"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                    className="border rounded p-2 w-full"
-                    required
-                />
+        <div className="min-h-screen bg-orange-50 flex items-center justify-center p-6">
+            <div className="bg-white p-8 rounded-xl shadow-lg w-full max-w-md">
+                <h2 className="text-2xl font-semibold text-center text-gray-800 mb-6">Create New User</h2>
+
+                <form onSubmit={handleSubmit} className="space-y-6">
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700">First Name</label>
+                        <input
+                            type="text"
+                            name="firstName"
+                            value={formData.firstName}
+                            onChange={handleChange}
+                            className="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            required
+                        />
+                    </div>
+
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700">Last Name</label>
+                        <input
+                            type="text"
+                            name="lastName"
+                            value={formData.lastName}
+                            onChange={handleChange}
+                            className="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            required
+                        />
+                    </div>
+
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700">Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            className="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            required
+                        />
+                    </div>
+
+                    <div>
+                        <label className="block text-sm font-medium text-gray-700">Department</label>
+                        <select
+                            name="department"
+                            value={formData.department}
+                            onChange={handleChange}
+                            className="border border-gray-300 rounded-lg p-3 w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            required
+                        >
+                            <option value="">Select a department</option>
+                            <option value="Human Resources">Human Resources</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Marketing">Marketing</option>
+                            <option value="Research and Development">Research and Development</option>
+                        </select>
+                    </div>
+
+                    <button
+                        type="submit"
+                        className="w-full bg-blue-600 text-white py-3 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                    >
+                        Create User
+                    </button>
+                </form>
             </div>
-            <div>
-                <label className="block">Last Name:</label>
-                <input
-                    type="text"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    className="border rounded p-2 w-full"
-                    required
-                />
-            </div>
-            <div>
-                <label className="block">Email:</label>
-                <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="border rounded p-2 w-full"
-                    required
-                />
-            </div>
-            <div>
-                <label className="block">Department:</label>
-                <select
-                    name="department"
-                    value={formData.department}
-                    onChange={handleChange}
-                    className="border rounded p-2 w-full"
-                    required
-                >
-                    <option value="">Select a department</option>
-                    <option value="Human Resources">Human Resources</option>
-                    <option value="Information Technology">Information Technology</option>
-                    <option value="Marketing">Marketing</option>
-                    <option value="Research and Development">Research and Development</option>
-                </select>
-            </div>
-            <button type="submit" className="bg-blue-500 text-white rounded px-4 py-2">
-                Create User
-            </button>
-        </form>
+        </div>
     );
 };
 

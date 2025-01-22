@@ -12,8 +12,6 @@ createRoot(document.getElementById('root')).render(
     <Routes>
       <Route path = '/' element = {<App/>}/>
       <Route path = '/new' element = {<CreateForm/>}/>
-      <Route path = '/edit/:id' element = {<EditForm/>}/>
-      <Route path = '*' element = {<PageNotFound/>}/>
     </Routes>
   </BrowserRouter>
 )
